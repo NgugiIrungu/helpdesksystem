@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Information</title>
+    <style>
+        /* CSS styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #f0a608;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .navbar-logo {
+            margin-right: 10px;
+        }
+
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        .dashboard-content {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333333;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" class="navbar-logo">
+                Catholic University of Eastern Africa
+            </a>
+            <button class="navbar-toggler" type="button" onclick="toggleNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Program Information</h1>
+
+        <!-- Program Information -->
+        <div class="dashboard-content">
+            <h2>Program Information</h2>
+            <p>Current Enrolled Units: <span id="current-enrolled-units">Loading...</span></p>
+            <p>Program Duration: 4 years</p>
+            <p>Academic Calendar: Check the university website</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
+

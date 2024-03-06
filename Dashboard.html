@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #f0a608;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: top;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .navbar-logo {
+            margin-right: 10px;
+        }
+
+        .navbar-toggler {
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        .navbar-toggler-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #007bff;
+            display: block;
+            border-radius: 3px;
+        }
+
+        .collapse.navbar-collapse {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+
+        ul.navbar-nav {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-right: 15px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        p {
+            color: #555555;
+        }
+
+        .dashboard-content {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333333;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" class="navbar-logo">
+                Catholic University of Eastern Africa
+            </a>
+            <button class="navbar-toggler" type="button" onclick="toggleNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Welcome to the Student Dashboard</h1>
+
+        <!-- Quick Links -->
+        <div class="dashboard-content">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="submit_issue.html">Submit an Issue</a></li>
+                <li><a href="view_issue.html">View My Issues</a></li>
+                <li><a href="view_program.html">View Program Information</a></li>
+                
+            </ul>
+        </div>
+
+       
+        <div class="dashboard-content">
+            <h2>Overview Widgets</h2>
+            <ul>
+                <li>Total Open Issues: <span id="total-open-issues"></span></li>
+                <li>Total Resolved Issues: <span id="total-resolved-issues"></span></li>
+                <li>Important Announcements: <span id="important-announcements">Check your email for updates</span></li>
+            </ul>
+        </div>
+
+     
+        <div class="dashboard-content">
+            <h2>My Issues Section</h2>
+            <ul id="my-issues-list">
+                //Issues will be dynamically populated here 
+            </ul>
+        </div>
+
+        <!-- Program Information -->
+        <div class="dashboard-content">
+            <h2>Program Information</h2>
+            <p>Current Enrolled Units: <span id="current-enrolled-units">5</span></p>
+            <p>Program Duration: 4 years</p>
+            <p>Academic Calendar: Check the university website</p>
+        </div>
+
+        <!-- Notifications -->
+        <div class="dashboard-content">
+            <h2>Notifications</h2>
+            <p>No new notifications at the moment</p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="dashboard-content">
+            <h2>Contact Information</h2>
+            <p>Email: </p>
+            <p>Phone: </p>
+            <p>Support Portal: <a href="#"></a></p>
+        </div>
+
+        <!-- User Profile -->
+        <div class="dashboard-content">
+            <h2>User Profile</h2>
+            <!-- Include user profile details and update options -->
+        </div>
+
+        <!-- Logout Button -->
+        <div class="dashboard-content">
+            <a href="#">Logout</a>
+        </div>
+    </div>
+
+  
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        /* CSS styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #f0a608;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Fixed position */
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .navbar-logo {
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-right: 15px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        h2 {
+            color: #333333;
+            margin-bottom: 15px;
+        }
+
+        .dashboard-content {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        p {
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" class="navbar-logo">
+                Admin Dashboard
+            </a>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Welcome to the Admin Dashboard</h1>
+
+        <section id="issue-management" class="dashboard-content">
+            <h2>Issue Management</h2>
+            <!-- Issue management content -->
+        </section>
+
+        <section id="user-management" class="dashboard-content">
+            <h2>User Management</h2>
+            <!-- User management content -->
+        </section>
+
+        <section id="program-info" class="dashboard-content">
+            <h2>Program Information</h2>
+            <!-- Program information content -->
+        </section>
+
+        <section id="analytics" class="dashboard-content">
+            <h2>Analytics and Reporting</h2>
+            <!-- Analytics and reporting content -->
+        </section>
+
+        <section id="settings" class="dashboard-content">
+            <h2>Settings</h2>
+            <!-- Settings content -->
+        </section>
+    </div>
+
+</body>
+</html>

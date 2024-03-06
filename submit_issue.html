@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Issue</title>
+    <style>
+        /* CSS styles remain unchanged */
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #f0a608;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top:0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .navbar-logo {
+            margin-right: 10px;
+        }
+
+        .navbar-links {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-right: 15px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555555;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" class="navbar-logo">
+                Catholic University of Eastern Africa
+            </a>
+            <ul class="navbar-links">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="view_issue.html">My Issues</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Submit an Issue</h1>
+        <form id="issueForm">
+            <label for="issueName">Issue Name:</label>
+            <input type="text" id="issueName" name="issueName" required>
+
+            <label for="issueDescription">Issue Description:</label>
+            <textarea id="issueDescription" name="issueDescription" rows="4" required></textarea>
+
+            <label for="targetPerson">Target Person:</label>
+            <input type="text" id="targetPerson" name="targetPerson" required>
+
+            <label for="issueSemester">Issue Semester:</label>
+            <input type="text" id="issueSemester" name="issueSemester" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
