@@ -60,8 +60,11 @@
     <div class="register-form">
         <h2>Register Here</h2>
         <?php
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1);
+
         require_once "dbconnect.php";
-        if (isset($_POST["Register"])) { 
+        if (isset($_POST["submit"])) { 
             $username = $_POST["username"];
             $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
             $firstName = $_POST["first_name"];
@@ -69,25 +72,30 @@
             $email = $_POST["email"];
             $role = $_POST["role"];
 
-            $sql = "INSERT INTO users (user_username, user_password, user_fname, user_lname, user_email, user_role) 
-                    VALUES ('$username', '$password', '$firstName', '$lastName', '$email', '$role')";
+            // Generate a unique user_id
+            $user_id = 1;
 
-            if ($conn->query($sql) === TRUE) {
-                echo "Registration successful!";
+
+            $stmt = $conn->prepare("INSERT INTO users (user_id, user_username, user_password, user_fname, user_lname, user_email, user_role) VALUES (?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param($user_id, $username, $password, $firstName, $lastName, $email, $role);
+
+            if ($stmt->execute()) {
+                echo "New record created successfully";
             } else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
+                echo "Error: " . $stmt->error;
             }
+
             $conn->close();
         }
         ?>
-        <form method="POST" action="">
+        <form method="POST" action="register.php">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" class="form-control" required autofocus>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="text" name="password" id="password" class="form-control" required>
+                <input type="password" name="password" id="password" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="first_name">First Name</label>
@@ -109,12 +117,10 @@
                 </select>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn-primary">Register</button>
+                <button type="submit" name="submit" class="btn-primary">Register</button>
             </div>
         </form>
         <p class="text-center">Already have an account? <a href="login.html">Login</a></p>
     </div>
 </body>
 </html>
-
-

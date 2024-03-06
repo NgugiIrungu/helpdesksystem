@@ -18,6 +18,32 @@ if ($conn->connect_error) {
 }else{
     // Log if the connection was successful
     echo "Connected successfully";
+    // FETCH and display DATA FROM DATABASE
+    // $sql = "SELECT * FROM faculty";
+    // $result = $conn->query($sql);
+
+    // // Check if there are any records in the database
+    // echo "<br> Number of records in the database:";
+    // echo $result->num_rows;
+
+    // if ($result->num_rows > 0) {
+    //     // output data of each row
+    //     echo "<table border='1'>";
+    //     echo "<tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Phone</th></tr>";
+    //     while($row = $result->fetch_assoc()) {
+    //         echo "<tr><td>".$row["faculty_id"]."</td><td>".$row["faculty_name"]."</td><td>".$row["faculty_email"]."</td><td>".$row["faculty_phonenumber"]."</td><td>".$row["faculty_dean"]."</td></tr>";
+    //     }
+    //     echo "</table>";
+    // } else {
+    //     echo "0 results";
+    // }
+
+    // Close the connection
+    // $conn->close();
+
 
 }
 ?>
+
+
+
